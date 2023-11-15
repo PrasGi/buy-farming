@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buy</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header
+      id="header"
+      class="header fixed-top d-flex align-items-center shadow"
+    >
+      <div class="d-flex align-items-center justify-content-between">
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+        <a href="#" class="logo d-flex align-items-center">
+          <span class="d-none d-lg-block fs-3 ms-3">Buy market</span>
+        </a>
+      </div>
+      <!-- End Logo -->
+
+      <nav class="header-nav ms-auto p-5">
+        <!-- add button logout -->
+        <a type="button" class="btn btn-success" onclick="checkout()">
+          <i class="bi bi-cart"></i> Checkout
+        </a>
+        <a href="main.html" class="btn btn-outline-danger"
+          ><i class="bi bi-box-arrow-left"></i> Logout</a
+        >
+      </nav>
+      <!-- End Icons Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar shadow-lg">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="home.html">
+            <i class="bi bi-house"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <!-- End Dashboard Nav -->
+      </ul>
+    </aside>
+    <!-- End Sidebar-->
+
+    <main class="main" id="main">
+      <!-- Header main -->
+      <div class="row">
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1678726492727-3b88020f0fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZhcm1pbmclMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Arit</h5>
+              <b class="card-text" id="price1"> 65000 </b>
+              <p class="card-text">
+                ARIT BAJA ARIT TAJAM ARIT RUMPUT ARIT SABIT ARIT TAHAN BANTING
+                ARIT MURAH
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-secondary"
+                  onclick="decrementValue(this)"
+                >
+                  -
+                </button>
+                <span id="count">0</span>
+                <button
+                  class="btn btn-secondary"
+                  onclick="incrementValue(this)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1680016511971-faf115753687?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGZhcm1pbmclMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Gunting tanaman</h5>
+              <b class="card-text" id="price2"> 79000 </b>
+              <p class="card-text">
+                Dapatkan Harga gunting tanaman Murah & Terbaru. Beli gunting
+                tanaman Aman & Garansi Shopee. Bisa COD ✓ Promo & Diskon
+                Terlengkap ✓ Cashback
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-secondary"
+                  onclick="decrementValue(this)"
+                >
+                  -
+                </button>
+                <span id="count">0</span>
+                <button
+                  class="btn btn-secondary"
+                  onclick="incrementValue(this)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1678725714126-c7c1e8c343a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjV8fGZhcm1pbmclMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Gunting tanaman jumbo</h5>
+              <b class="card-text" id="price3"> 100000 </b>
+              <p class="card-text">
+                Dapatkan Harga gunting tanaman Murah & Terbaru. Beli gunting
+                tanaman Aman & Garansi Shopee.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-secondary"
+                  onclick="decrementValue(this)"
+                >
+                  -
+                </button>
+                <span id="count">0</span>
+                <button
+                  class="btn btn-secondary"
+                  onclick="incrementValue(this)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1678283374507-05d64981f1f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGZhcm1pbmclMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Gunting Tanaman Mini</h5>
+              <b class="card-text" id="price4"> 79000 </b>
+              <p class="card-text">
+                Gunting mini untuk tanaman, dengan kualitas mantap dan
+                terpercaya teruji SNI ges, ayo beliiii
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-secondary"
+                  onclick="decrementValue(this)"
+                >
+                  -
+                </button>
+                <span id="count">0</span>
+                <button
+                  class="btn btn-secondary"
+                  onclick="incrementValue(this)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1679063192771-aca74fc3b56b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGZhcm1pbmclMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Pemotong rumput</h5>
+              <b class="card-text" id="price5"> 799000 </b>
+              <p class="card-text">
+                Pemotong rumbut yang membuat kita mudah tanpa perlu susah susah
+                untuk memotong rumput hanya perlu sat set dan berea
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-secondary"
+                  onclick="decrementValue(this)"
+                >
+                  -
+                </button>
+                <span id="count">0</span>
+                <button
+                  class="btn btn-secondary"
+                  onclick="incrementValue(this)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661908883844-a415923586a4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGZhcm1pbmclMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Pipa pupuk</h5>
+              <b class="card-text" id="price6"> 120000 </b>
+              <p class="card-text">
+                Untuk mengelolah pupuk dengan cept walaupun muatannya banyak,
+                kualitasnya aman dan sangat kuat
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-secondary"
+                  onclick="decrementValue(this)"
+                >
+                  -
+                </button>
+                <span id="count">0</span>
+                <button
+                  class="btn btn-secondary"
+                  onclick="incrementValue(this)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://images.unsplash.com/photo-1589876568181-a1508b8ef473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fGZhcm1pbmclMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Penyiram Tanaman</h5>
+              <b class="card-text" id="price7"> 290000 </b>
+              <p class="card-text">
+                Dengan alat ini anda tidak perlu lagi mengambil air dengan susah
+                payah karena dengan ini anda hanya perlu mengarahkan air ke
+                tujuan, mudah bukan
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-secondary"
+                  onclick="decrementValue(this)"
+                >
+                  -
+                </button>
+                <span id="count">0</span>
+                <button
+                  class="btn btn-secondary"
+                  onclick="incrementValue(this)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://images.unsplash.com/photo-1507662228758-08d030c4820b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fGZhcm1pbmclMjB0b29sc3xlbnwwfHwwfHx8MA%3D%3D"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Traktor</h5>
+              <b class="card-text" id="price8"> 7893000 </b>
+              <p class="card-text">
+                Tidak perlu lagi menggunakan alat tradisional seperi sapi untuk
+                membajak tanah anda, karena saat ini kami sudah menyediakan yang
+                lebih bagus
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button
+                  class="btn btn-secondary"
+                  onclick="decrementValue(this)"
+                >
+                  -
+                </button>
+                <span id="count">0</span>
+                <button
+                  class="btn btn-secondary"
+                  onclick="incrementValue(this)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end header main -->
+    </main>
+
+    <div id="invoice" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title text-light">
+              <i class="bi bi-currency-dollar"></i> Invoice payment
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="invoice-body">
+            <!-- Isi invoice akan ditampilkan di sini -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Checout now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      function incrementValue(button) {
+        var span = button.parentElement.querySelector("#count");
+        var currentValue = parseInt(span.innerHTML);
+        span.innerHTML = currentValue + 1;
+      }
+
+      function decrementValue(button) {
+        var span = button.parentElement.querySelector("#count");
+        var currentValue = parseInt(span.innerHTML);
+        if (currentValue > 0) {
+          span.innerHTML = currentValue - 1;
+        }
+      }
+
+      function checkout() {
+        var products = document.querySelectorAll(".card");
+        var totalProducts = 0;
+        var totalPrice = 0;
+
+        products.forEach(function (product, index) {
+          var count = parseInt(product.querySelector("#count").innerHTML);
+          var priceId = "price" + (index + 1);
+          var price = parseInt(product.querySelector("#" + priceId).innerHTML);
+
+          totalProducts += count;
+          totalPrice += count * price;
+        });
+
+        var invoiceBody = document.getElementById("invoice-body");
+        invoiceBody.innerHTML = "<p>Total Products: " + totalProducts + "</p>";
+        invoiceBody.innerHTML += "<p>Total Price: " + totalPrice + "</p>";
+
+        // Tampilkan modal invoice
+        var invoiceModal = new bootstrap.Modal(
+          document.getElementById("invoice")
+        );
+        invoiceModal.show();
+      }
+    </script>
+  </body>
+</html>
