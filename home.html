@@ -43,7 +43,7 @@
       <nav class="header-nav ms-auto p-5">
         <!-- add button logout -->
         <a type="button" class="btn btn-success" onclick="checkout()">
-          <i class="bi bi-cart"></i> Checkout
+          <i class="bi bi-cart"></i> Check out
         </a>
         <a href="index.html" class="btn btn-outline-danger"
           ><i class="bi bi-box-arrow-left"></i> Logout</a
@@ -350,13 +350,22 @@
           <div class="modal-body" id="invoice-body">
             <!-- Isi invoice akan ditampilkan di sini -->
           </div>
+          <div class="p-2">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Payment Method</option>
+              <option value="1">Qris</option>
+              <option value="2">Shoopay</option>
+              <option value="3">Gopay</option>
+              <option value="4">Bank Central Asia</option>
+            </select>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
               class="btn btn-success"
               data-bs-dismiss="modal"
             >
-              Checout now
+              Check out now
             </button>
           </div>
         </div>
